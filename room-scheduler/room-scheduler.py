@@ -15,6 +15,7 @@ def main():
         def ping():
             '''Heartbeat function'''
             return 'pong'
+        ping() #this is really to make pylint happy
 
     HTTP_SERVER = WSGIServer(('', 5080), app)
     HTTP_SERVER.serve_forever()
