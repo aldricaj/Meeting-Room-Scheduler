@@ -1,8 +1,8 @@
 from flask import Flask
-from gevent.wsgi import WSGIServer
+from gevent.pywsgi import WSGIServer
 
 def main():
-    ''' Starts the app reading in config (when I make it) '''
+    ''' Starts the app reading in config (when I make it) '''  
     
     # TODO load configs here
     enviorment = 'DEV'
