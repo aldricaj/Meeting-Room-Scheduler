@@ -4,4 +4,25 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<div id="footerContainer">
+		<div class="footerContent container">
+			503 Group Name Not Implemented
+		</div>
+	</div>
+	<script>
+	$(document).ready(function(){
+  
+  var footerHeight=$('#footerContainer').outerHeight(true);
+  $('#wrapper').css({'margin-bottom':(footerHeight-footerHeight)-footerHeight+'px'});
+  $('.footerHeightInsert').css({'height':footerHeight+'px'});
+	
+	
+	$(".readMore").click(function(){
+		$(".moreText").slideToggle(300);
+	});
+
+});
+
+
+	</script>
 </footer>

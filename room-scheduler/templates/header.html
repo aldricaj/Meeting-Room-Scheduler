@@ -7,6 +7,7 @@
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 	<link rel="stylesheet" type="text/css" href="../static/{{cssFilename}}">
 	<link rel="stylesheet" type="text/css" href="../static/header.css">
+	<link rel="stylesheet" type="text/css" href="../static/footer.css">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
@@ -18,9 +19,7 @@
 				<ul>
 					<li class="route"><a href="/dashboard">Dashboard</a></li>
 					<li class="route"><a href="/admin-page">Admin Page</a></li>
-					{% if loggedIn is True %}
-						<li class="route"><a href="/">Sign Out</a></li>
-					{% endif %}
+					<li class="route"><a href="/">Sign Out</a></li>
 				</ul>
 			</nav>
 		</div>
