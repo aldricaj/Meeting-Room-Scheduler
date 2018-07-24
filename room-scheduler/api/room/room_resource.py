@@ -12,7 +12,7 @@ class RoomResource(Resource):
         if not request.is_json:
             return 'The request is not a json. Check your mimetype to make sure it identifies as application/JSON', 400
 
-        room = Room(**request.json)
+        room = Room(**from_json(**request.json))
         room.org_id = org_id
 
         return update(room).to_json(), 200
@@ -25,7 +25,7 @@ class RoomListResource(Resource):
         if not request.is_json:
             return 'The request is not a json. Check your mimetype to make sure it identifies as application/JSON', 400
 
-        new_room = Room(**request.json)
+        new_room = Room(**from_json(**request.json))
         new_room.org_id = org_id
 
         return create(new_room).to_json(), 200
