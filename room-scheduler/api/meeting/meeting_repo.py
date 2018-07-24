@@ -13,5 +13,8 @@ def create(meeting_obj):
 def update(meeting_obj):
     pass
 
-def get_Attendees(org_id, meeting_id):
+def get_attendees(org_id, meeting_id):
+    pass
+	
+def add_attendees(org_id, meeting_id):
     pass

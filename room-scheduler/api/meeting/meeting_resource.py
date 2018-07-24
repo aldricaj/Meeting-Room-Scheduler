@@ -35,4 +35,4 @@ class MeetingAttendeesResource(Resource):
         return get_attendees(org_id, meeting_id), 200
         
     def post(self, org_id, meeting_id):
-        return set_attendess(org_id, meeting_id), 200
+        return add_attendess(org_id, meeting_id), 200
