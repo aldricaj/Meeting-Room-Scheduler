@@ -1,6 +1,11 @@
 <div class="box effect8">
     <div class="col-sm-12 room">
-        <h2>{{MeetingRoom.roomNumber}}</h2>
+        <div class="col-sm-6">
+            <h2>{{MeetingRoom.roomNumber}}</h2>
+        </div>
+        <div class="col-sm-6">
+                <h4 style="float: right; margin-top: 24px;">+ Add New Room</h4>
+        </div>    
     </div>
     <hr>
     <div class="col-sm-6">
@@ -9,8 +14,8 @@
     <div class="col-sm-6">
         {{Meeting.startTime}} - {{Meeting.endTime}}
     </div> 
-    <div class="col-sm-12">
-        <table align="center" style="width:80%">
+    <div class="col-sm-10">
+        <table align="center" style="width:100%">
             <tr>
             <th></th>
             <th>8am</th> 
@@ -132,5 +137,9 @@
             <td></td>
             </tr>
         </table>
+    </div>
+    <div class="col-sm-2" style="position: absolute;bottom: 0;right: -50px;">
+        Media Availability: Green<br />
+        AV Type: Projector
     </div>
 </div>

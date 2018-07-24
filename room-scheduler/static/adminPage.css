@@ -1,0 +1,17 @@
+.admin{
+    margin-top: 10% !important;
+    margin-bottom: 10% !important;
+}
+  .sort{
+      margin-left: 10%;
+  }
+  
+  .effect8
+  {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  .effect9
+    {
+        border-style: solid;
+        border-width: 1px;
+    }
