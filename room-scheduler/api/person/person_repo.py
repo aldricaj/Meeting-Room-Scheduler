@@ -11,10 +11,19 @@ def get_one(org_id, username):
 
     params = { 'org_id': org_id, 'username':username }
 
-    return run_query(query, params, Person)
+    return run_query(query, params, Person)[0]
 
 def get_many(org_id):
-    pass
+    query = '''
+        SELECT org_id, username, first_name, last_name, email, role_id, role_name
+        FROM person, role
+        WHERE person.role = role.role_id 
+        AND org_id = %(org_id)s;
+    '''
+
+    params = { 'org_id': org_id }
+
+    return run_query(query, params, Person)
 
 def create(person_obj):
     pass
