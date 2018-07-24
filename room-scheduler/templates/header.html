@@ -15,9 +15,14 @@
 		$(document).ready(function(){
 			if(window.location.href === "http://localhost:5080/"){
 				$("[href='/']").hide()
+				$("[href='/dashboard']").hide()
+				$("[href='/admin-page']").hide()
+
 			}
 			else {
 				$("[href='/']").show()
+				$("[href='/dashboard']").show()
+				$("[href='/admin-page']").show()
 			}
 		});
 	</script>
