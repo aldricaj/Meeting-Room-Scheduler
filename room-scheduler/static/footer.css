@@ -1,50 +1,17 @@
-body {
-    max-width: 100%;
-    width: 100%;
-    background: #f4f4f4;
-    margin: 0;
+html {
+  min-height: 100%;
+  position: relative;
 }
-  
-html,body {
-    height: 100%;
+html body {
+  margin-bottom: 60px;
 }
-#wrapper {
-    min-height: 100%;
-    height: auto;
+html #footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  height: 60px;
+  background-color: #f5f5f5;
 }
-  /*-------------*/
-  
-.container {
-    width: 800px;
-    margin: 0 auto;
-    padding: 0 10px;
-    max-width: 100%;
-    box-sizing: border-box;
+html #footer .footer-block {
+  margin: 20px 0;
 }
-  
-  .content {
-    display: inline-block;
-  }
-  p {
-      font: 500 14px/24px arial;
-    }
-  .readMore {
-    padding: 10px;
-    float: right;
-    background: #f0f0f0;
-    border: 1px solid #e0e0e0;
-    font-size: 14px;
-    text-decoration: none;
-    color:inherit;
-  }
-  .moreText {
-    display: none;
-  }
-  
-  #footerContainer {
-    float: left;
-    width: 100%;
-    padding: 15px 0 10px 0;
-    background: #ffffff;
-    position: relative;
-  }
