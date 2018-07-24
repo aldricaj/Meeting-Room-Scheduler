@@ -63,7 +63,6 @@ table {
 table, th, td {
     border: 1px solid black;
 }
-<<<<<<< HEAD
 .circle {
     width: 10px;
     height: 10px;
@@ -75,6 +74,3 @@ table, th, td {
   .green {
     background-color: green;
   }
-=======
-td:hover {background-color: #bbb;}
->>>>>>> af9b5965dd181294a6cc5e56119243ee148e0311
