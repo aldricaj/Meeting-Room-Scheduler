@@ -70,119 +70,124 @@ function getOrgs() {
 	return loadFromLocal('orgs')
 }
 
-addOrg({
-	orgId: 1,
-  orgName: "Test Organization 1"
-})
-
-addOrg({
-	orgId: 2,
-  orgName: "Test Organization 2"
-})
-
-addPerson({
-	orgId: 1,
-  username: "jabrams",
-  firstName:"John",
-  lastName: "Smith",
-  email:"jsmith@nowhere.com",
-  role: { roleId: 1, roleName: "Administrator"}
-});
-
-addPerson({
-	orgId: 1,
-  username: "jdoe",
-  firstName:"John",
-  lastName: "Doe",
-  email:"jdoe@nowhere.com",
-  role: { roleId: 2, roleName: "user"}
-});
-
-addPerson({
-	orgId: 1,
-  username: "jdoe2",
-  firstName:"Jane",
-  lastName: "Doe",
-  email:"jdoe2@nowhere.com",
-  role: { roleId: 2, roleName: "user"}
-});
-
-addPerson({
-	org_id: 1,
-  username: "alovelace",
-  first_name:"Ada",
-  last_name: "Lovelace",
-  email:"alovelace@nowhere.com",
-  role: { role_id: 2, role_name: "user"}
-});
-addRoom({
-	orgId: 1,
-  roomNumber: "1",
-  avType: {
-  	avTypeId: 1,
-    avTypeText:"None"
-  },
-  schedule: [
-  	{
-      meeting_id: 1,
-      meeting_start: new Date(2018, 6, 25, 9, 0),
-      meeting_end: new Date(2018, 6, 25, 10, 0),
-      meeting_title: "Post Mortem"
+if (!loadFromLocal('ran')) {
+  console.log('Adding Data');
+  addOrg({
+    orgId: 1,
+    orgName: "Test Organization 1"
+  })
+  
+  addOrg({
+    orgId: 2,
+    orgName: "Test Organization 2"
+  })
+  
+  addPerson({
+    orgId: 1,
+    username: "jabrams",
+    firstName:"John",
+    lastName: "Smith",
+    email:"jsmith@nowhere.com",
+    role: { roleId: 1, roleName: "Administrator"}
+  });
+  
+  addPerson({
+    orgId: 1,
+    username: "jdoe",
+    firstName:"John",
+    lastName: "Doe",
+    email:"jdoe@nowhere.com",
+    role: { roleId: 2, roleName: "user"}
+  });
+  
+  addPerson({
+    orgId: 1,
+    username: "jdoe2",
+    firstName:"Jane",
+    lastName: "Doe",
+    email:"jdoe2@nowhere.com",
+    role: { roleId: 2, roleName: "user"}
+  });
+  
+  addPerson({
+    org_id: 1,
+    username: "alovelace",
+    first_name:"Ada",
+    last_name: "Lovelace",
+    email:"alovelace@nowhere.com",
+    role: { role_id: 2, role_name: "user"}
+  });
+  
+  addRoom({
+    orgId: 1,
+    roomNumber: "1",
+    avType: {
+      avTypeId: 1,
+      avTypeText:"None"
     },
-    {
-    	meeting_id: 2,
-      meeting_start: new Date(2018, 6, 26, 13,0),
-      meeting_end: new Date(2018, 6, 26, 14,0),
-      meeting_title: "Sprint Planning"
-    }
-  ]
-});
-
-addRoom({
-	orgId: 1,
-  roomNumber: "2",
-  avType: {
-  	avTypeId: 2,
-    avTypeText:"Projector"
-  },
-  schedule: [
-  	{
-      meeting_id: 3,
-      meeting_start: new Date(2018, 6, 24, 14, 0),
-      meeting_end: new Date(2018, 6, 24, 16, 0),
-      meeting_title: "Long Meeting"
+    schedule: [
+      {
+        meeting_id: 1,
+        meeting_start: new Date(2018, 6, 25, 9, 0),
+        meeting_end: new Date(2018, 6, 25, 10, 0),
+        meeting_title: "Post Mortem"
+      },
+      {
+        meeting_id: 2,
+        meeting_start: new Date(2018, 6, 26, 13,0),
+        meeting_end: new Date(2018, 6, 26, 14,0),
+        meeting_title: "Sprint Planning"
+      }
+    ]
+  });
+  
+  addRoom({
+    orgId: 1,
+    roomNumber: "2",
+    avType: {
+      avTypeId: 2,
+      avTypeText:"Projector"
     },
-    {
-    	meeting_id: 4,
-      meeting_start: new Date(2018, 6, 26, 13,0),
-      meeting_end: new Date(2018, 6, 26, 14,0),
-      meeting_title: "Short Meetings"
-    }
-  ]
-});
-
-addRoom({
-	orgId: 1,
-  roomNumber: "3",
-  avType: {
-  	avTypeId: 3,
-    avTypeText:"Television"
-  },
-  schedule: [
-  	{
-      meeting_id: 6,
-      meeting_start: new Date(2018, 6, 24, 12, 0),
-      meeting_end: new Date(2018, 6, 24, 16, 0),
-      meeting_title: "Ultra Long Meeting"
+    schedule: [
+      {
+        meeting_id: 3,
+        meeting_start: new Date(2018, 6, 24, 14, 0),
+        meeting_end: new Date(2018, 6, 24, 16, 0),
+        meeting_title: "Long Meeting"
+      },
+      {
+        meeting_id: 4,
+        meeting_start: new Date(2018, 6, 26, 13,0),
+        meeting_end: new Date(2018, 6, 26, 14,0),
+        meeting_title: "Short Meetings"
+      }
+    ]
+  });
+  
+  addRoom({
+    orgId: 1,
+    roomNumber: "3",
+    avType: {
+      avTypeId: 3,
+      avTypeText:"Television"
     },
-    {
-    	meeting_id: 7,
-      meeting_start: new Date(2018, 6, 27, 13,0),
-      meeting_end: new Date(2018, 6, 27, 14,0),
-      meeting_title: "Short Meetings"
-    }
-  ]
-});
+    schedule: [
+      {
+        meeting_id: 6,
+        meeting_start: new Date(2018, 6, 24, 12, 0),
+        meeting_end: new Date(2018, 6, 24, 16, 0),
+        meeting_title: "Ultra Long Meeting"
+      },
+      {
+        meeting_id: 7,
+        meeting_start: new Date(2018, 6, 27, 13,0),
+        meeting_end: new Date(2018, 6, 27, 14,0),
+        meeting_title: "Short Meetings"
+      }
+    ]
+  });
+  saveToLocal('ran', "true")
+  }
 $(document).ready(function(){
   
   var meetingRooms = getRooms();
