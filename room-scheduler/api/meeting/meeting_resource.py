@@ -12,7 +12,7 @@ class MeetingResource(Resource):
         if not request.is_json:
             return 'The request is not a json. Check your mimetype to make sure it identifies as application/JSON', 400
 
-        meeting = Meeting(**request.json)
+        meeting = Meeting(**from_json(**request.json))
         meeting.org_id = org_id
 
         return update(meeting).to_json(), 200
@@ -25,7 +25,7 @@ class MeetingListResource(Resource):
         if not request.is_json:
             return 'The request is not a json. Check your mimetype to make sure it identifies as application/JSON', 400
 
-        new_meeting = Meeting(**request.json)
+        new_meeting = Meeting(**from_json(**request.json))
         new_meeting.org_id = org_id
 
         return create(new_meeting).to_json(), 200
