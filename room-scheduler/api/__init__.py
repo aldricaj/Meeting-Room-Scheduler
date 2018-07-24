@@ -10,12 +10,16 @@ def run_query(query, parameters=None, return_class=None):
     cursor = _conn.cursor()   
     cursor.execute(query, parameters)
     result = []
-    for row in cursor:
-        if return_class:
-            result.append(return_class(*row))
-        else:
-            result.append(row)
-    cursor.close()
+    try:
+        for row in cursor:
+            if return_class:
+                result.append(return_class(*row))
+            else:
+                result.append(row)
+
+        cursor.commit()
+    finally:
+        cursor.close()
 
     return result
 
