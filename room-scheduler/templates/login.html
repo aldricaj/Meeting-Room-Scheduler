@@ -1,0 +1,15 @@
+{% include 'header.html' %}
+<body>
+    <div class="log-form">
+        <h2>Login to your account</h2>
+        <form>
+          <input type="text" title="username" placeholder="Username" />
+          <select  title="organization" placeholder="Organization" >
+              <option selected="selected" value="UC Office of Research">UC Office of Research</option>
+          </select>
+          <button type="submit" class="btn">Login</button>
+          <a class="forgot" href="/new-organization">Don't have an Organization?</a>
+        </form>
+      </div><!--end log form -->
+</body>
+{% include 'footer.html' %}

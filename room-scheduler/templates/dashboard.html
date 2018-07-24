@@ -1,0 +1,22 @@
+{% include 'header.html' %}
+<body>
+    
+    <div class="rooms">
+        <div class="col-xs-12">
+            <div class="sort">
+                <select class="b-select">
+                    <option disabled selected>Sort By</option>
+                    <option data-sort="price:asc">Availability</option>
+                    <option data-sort="price:desc">AV Type: Projector</option>
+                    <option data-sort="price:desc">AV Type: TV</option>
+                    <option data-sort="price:desc">AV Type: None</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            {% include 'meetingRoom.html' %}
+        </div>
+    </div>
+</body>
+<script src='../static/meetingRoom.js'></script>
+{% include 'footer.html' %}

@@ -1,0 +1,50 @@
+body {
+    max-width: 100%;
+    width: 100%;
+    background: #f4f4f4;
+    margin: 0;
+}
+  
+html,body {
+    height: 100%;
+}
+#wrapper {
+    min-height: 100%;
+    height: auto;
+}
+  /*-------------*/
+  
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+  
+  .content {
+    display: inline-block;
+  }
+  p {
+      font: 500 14px/24px arial;
+    }
+  .readMore {
+    padding: 10px;
+    float: right;
+    background: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    text-decoration: none;
+    color:inherit;
+  }
+  .moreText {
+    display: none;
+  }
+  
+  #footerContainer {
+    float: left;
+    width: 100%;
+    padding: 15px 0 10px 0;
+    background: #ffffff;
+    position: relative;
+  }
