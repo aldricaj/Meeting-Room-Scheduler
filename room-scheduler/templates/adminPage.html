@@ -35,7 +35,46 @@
                             <h1>Users</h1>
                         </div>
                         <div class="col-sm-4">
-                                <h4 style="float: right; margin-top: 32px;">+ New User</h4>
+                                <a id="newUser" style="float: right; margin-top: 32px;"><h4>+ New User</h4></a>
+								<div id="userModel" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<div class="log-form">
+											<h2>Create New User</h2>
+											<form>
+											  <input type="text" title="username" placeholder="Username" />
+											  <input type="text" title="firstname" placeholder="Firstname" />
+											  <input type="text" title="lastname" placeholder="Lastname" />
+											  <input type="text" title="email" placeholder="Email" />
+											  <select  title="role" placeholder="Role" >
+												  <option selected="selected" value="User">User</option>
+												  <option value="administrator">Administrator</option>
+											  </select>
+											  <button type="submit" class="btn">Submit</button>
+											</form>
+										</div>
+									</div>
+								</div>
+								<script>
+									var modal = document.getElementById('userModel');	
+									var btn = document.getElementById('newUser');
+									var span = document.getElementsByClassName("close")[0];
+									var submit = document.getElementsByClassName("btn")[0];
+									btn.onclick = function() {
+										modal.style.display = "block";
+									}
+									span.onclick = function() {
+										modal.style.display = "none";
+									}
+									submit.onclick = function() {
+										modal.style.display = "none";
+									}
+									window.onclick = function(event) {
+										if (event.target == modal) {
+											modal.style.display = "none";
+										}
+									}
+								</script>
                         </div> 
                 <hr>
                 <div class="effect9 col-sm-12" style="margin-bottom: 10px">
