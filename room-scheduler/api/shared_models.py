@@ -25,3 +25,17 @@ def to_json(dic):
     '''
     return dict(
       [(_to_camel_case(k), str(dic[k])) for k in dic.keys()])
+
+def _to_snake_case(text):
+    '''
+        Convert Text from CamelCase to snake_case
+    '''
+    return ''.join([e if e.islower() else '_' + e.lower() for e in text])
+
+def from_json(dic):
+    '''
+        Converts the passed dictionaries keys from snake case to camel case
+        while preserving the values
+    '''
+    return dict(
+      [(_to_snake_case(k), str(dic[k])) for k in dic.keys()])

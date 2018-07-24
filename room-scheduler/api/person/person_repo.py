@@ -40,7 +40,7 @@ def create(person_obj):
 
     params = person_obj.__dict__
 
-    return run_query(query, params, Person)
+    return run_query(query, params, Person)[0]
 
 def update(person_obj):
     pass
@@ -62,4 +62,4 @@ def get_schedule(org_id, username):
 
     params = {'org_id': org_id, 'username':username}
 
-    return run_query(query, params, Event)
+    return run_query(query, params, Event)[0]

@@ -1,5 +1,6 @@
 from .person_repo import *
 from . import Person
+from .. import from_json
 
 from flask_restful import Resource
 from flask import request
@@ -12,7 +13,7 @@ class PersonResource(Resource):
         if not request.is_json:
             return 'The request is not a json. Check your mimetype to make sure it identifies as application/JSON', 400
 
-        person = Person(**request.json)
+        person = Person(**from_json(request.json))
         person.org_id = org_id
 
         return update(person).to_json(), 200
@@ -25,7 +26,7 @@ class PersonListResource(Resource):
         if not request.is_json:
             return 'The request is not a json. Check your mimetype to make sure it identifies as application/JSON', 400
 
-        new_person = Person(**request.json)
+        new_person = Person(**from_json(request.json))
         new_person.org_id = org_id
 
         return create(new_person).to_json(), 200
