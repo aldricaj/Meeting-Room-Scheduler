@@ -6,7 +6,7 @@ from flask import request
 
 class MeetingResource(Resource):
     def get(self, org_id, meeting_id):
-        return get_one(org_id, meetin_id), 200
+        return get_one(org_id, meeting_id), 200
 
     def put(self, org_id, meeting_id):
         if not request.is_json:
@@ -35,4 +35,4 @@ class MeetingAttendeesResource(Resource):
         return get_attendees(org_id, meeting_id), 200
         
     def post(self, org_id, meeting_id):
-        return add_attendess(org_id, meeting_id), 200
+        return add_attendee(org_id, meeting_id), 200

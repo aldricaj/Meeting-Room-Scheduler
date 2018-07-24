@@ -62,4 +62,4 @@ def get_schedule(org_id, username):
 
     params = {'org_id': org_id, 'username':username}
 
-    return run_query(query, params, Event)[0]
+    return run_query(query, params, Event)

@@ -1,5 +1,6 @@
 from .. import to_json
 from dataclasses import dataclass
+import datetime
 
 @dataclass
 class Meeting:
