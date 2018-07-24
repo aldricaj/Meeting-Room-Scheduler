@@ -7,7 +7,44 @@
                     <h1>Meeting Rooms</h1>
                 </div>
                 <div class="col-sm-4">
-                        <h4 style="float: right; margin-top: 32px;">+ New Room</h4>
+                        <a id="newRoom" style="float: right; margin-top: 32px;"><h4>+ New Room</h4></a>
+						<div id="roomModel" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<div class="log-form">
+											<h2>Create New Room</h2>
+											<form>
+											  <input type="text" title="roomNumber" placeholder="Room Number" />
+											  <select  title="mediaType" placeholder="Media Type" >
+												  <option selected="selected" value="none">None</option>
+												  <option value="tv">TV</option>
+												  <option value="projector">Projector</option>
+											  </select>
+											  <button type="submit" class="btn">Submit</button>
+											</form>
+										</div>
+									</div>
+								</div>
+								<script>
+									var roomModal = document.getElementById('roomModel');	
+									var roomBtn = document.getElementById('newRoom');
+									var roomSpan = document.getElementsByClassName("close")[0];
+									var roomSubmit = document.getElementsByClassName("btn")[0];
+									roomBtn.onclick = function() {
+										roomModal.style.display = "block";
+									}
+									roomSpan.onclick = function() {
+										roomModal.style.display = "none";
+									}
+									roomSubmit.onclick = function() {
+										roomModal.style.display = "none";
+									}
+									window.onclick = function(event) {
+										if (event.target == roomModal) {
+											roomModal.style.display = "none";
+										}
+									}
+								</script>
                 </div> 
                 <hr>
                 <div class="effect9 col-sm-12" style="margin-bottom: 10px">
